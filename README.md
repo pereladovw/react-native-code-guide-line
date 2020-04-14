@@ -2,7 +2,7 @@
 ## Оглавление
 
   1. [Основные правила](#basic-rules)
-  1. [Class против `React.createClass` против компонента без состояния (stateless)](#class-vs-reactcreateclass-vs-stateless)
+  1. [Component против PureComponent против компонента без состояния (stateless)](#class-vs-reactcreateclass-vs-stateless)
   1. [Именование](#naming)
   1. [Выравнивание](#alignment)
   1. [Кавычки](#quotes)
@@ -20,7 +20,7 @@
     - Однако, разрешается несколько компонентов без состояний или PureComponent в файле.
   - Всегда используйте JSX синтаксис.
 
-## <a name="#class-vs-reactcreateclass-vs-stateless">Class против компонента без состояния (stateless)</a>
+## <a name="#class-vs-reactcreateclass-vs-stateless">Component против PureComponent против компонента без состояния (stateless)</a>
 
   - Если у вас нет состояния (`state`) или ссылок (`refs`), но есть вспомогательные методы,
   отдавайте предпочтение PureComponent:
