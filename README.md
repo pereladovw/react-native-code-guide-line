@@ -25,51 +25,51 @@
     Если у вас нет состояния (`state`) или ссылок (`refs`), но есть вспомогательные методы,
     отдавайте предпочтение PureComponent:
 
-    ```tsx
-    // плохо
-    class Listing extends React.Component {
-      conponentDidMount() {
-        console.log(this.props.hello);
+      ```tsx
+      // плохо
+      class Listing extends React.Component {
+        conponentDidMount() {
+          console.log(this.props.hello);
+        }
+        render() {
+          return <Text>{this.props.hello}</Text>;
+        }
       }
-      render() {
-        return <Text>{this.props.hello}</Text>;
-      }
-    }
 
-    // хорошо
-    class Listing extends React.PureComponent {
-      conponentDidMount() {
-        console.log(this.props.hello);
+      // хорошо
+      class Listing extends React.PureComponent {
+        conponentDidMount() {
+          console.log(this.props.hello);
+        }
+        render() {
+          return <Text>{this.props.hello}</Text>;
+        }
       }
-      render() {
-        return <Text>{this.props.hello}</Text>;
-      }
-    }
-    ```
+      ```
 
     Если у вас нет состояния (`state`) или ссылок (`refs`) и вспомогательных методов,
     отдавайте предпочтение функциям над классами:
 
-    ```tsx
-    // плохо
-    class Listing extends React.Component {
-      render() {
-        return <Text>{this.props.hello}</Text>;
+      ```tsx
+      // плохо
+      class Listing extends React.Component {
+        render() {
+          return <Text>{this.props.hello}</Text>;
+        }
       }
-    }
 
-       // плохо
-    class Listing extends React.PureComponent {
-      render() {
-        return <Text>{this.props.hello}</Text>;
+        // плохо
+      class Listing extends React.PureComponent {
+        render() {
+          return <Text>{this.props.hello}</Text>;
+        }
       }
-    }
 
-    // хорошо
-    const Listing = ({ hello }) => (
-      <Text>{hello}</Text>
-    );
-    ```
+      // хорошо
+      const Listing = ({ hello }) => (
+        <Text>{hello}</Text>
+      );
+      ```
 
 ## <a name="naming">Именование</a>
 
