@@ -20,7 +20,7 @@
     - Однако, разрешается несколько компонентов без состояний или PureComponent в файле.
   - Всегда используйте JSX синтаксис.
 
-## <a name="#component-vs-purecomponent-vs-stateless">Component против PureComponent против компонента без состояния (stateless)</a>
+## <a name="component-vs-purecomponent-vs-stateless">Component против PureComponent против компонента без состояния (stateless)</a>
 
   - Если у вас нет состояния (`state`) или ссылок (`refs`), но есть вспомогательные методы,
   отдавайте предпочтение PureComponent:
